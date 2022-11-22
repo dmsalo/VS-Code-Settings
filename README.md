@@ -1,2 +1,2 @@
-# VS-Code-Settings-Theme
+# VS-Code-Settings
 Settings for VS Code 
