@@ -1,527 +1,578 @@
 {
   "C_Cpp.intelliSenseEngine": "Tag Parser",
-  
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    },
     
-   "[cpp]": {
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on",
-      "other": "on"
-    },
-    "editor.wordBasedSuggestions": true
-    },
-    "[c]": {
-        "editor.quickSuggestions": {
-          "comments": "on",
-          "strings": "on",
-          "other": "on"
-        },
-        "editor.wordBasedSuggestions": true
-    },
-    "C_Cpp.autocomplete": "Default",
-
-
-    /* para asociar Arduino con C++ */
-    "files.associations": {
-        "*.ino": "cpp"
-    },
-    
-
-  /* Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. 
-   Helps to avoid ambiguity between inserting new lines or accepting suggestions. 
-   The value 'smart' means only accept a suggestion with Enter when it makes a textual change */
-  "editor.acceptSuggestionOnEnter": "on",
-
-  /* Controls the delay in ms after which quick suggestions will show up. */
-  "editor.quickSuggestionsDelay": 10,
-
-  /* Controls if suggestions should automatically show up when typing trigger characters */
-  "editor.suggestOnTriggerCharacters": true,
-
-  /* Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions */
-  "editor.tabCompletion": "on",
-
-  /* Controls whether sorting favours words that appear close to the cursor */
-  "editor.suggest.localityBonus": true,
-
-  /* Controls how suggestions are pre-selected when showing the suggest list */
-  "editor.suggestSelection": "first",
-
-  /* Enable word based suggestions */
-  "editor.wordBasedSuggestions": true,
-
-
-  "editor.minimap.enabled": false,
-
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
-  },
-  "[php]": {
-    "editor.formatOnSave": true
-    /* "editor.renderWhitespace": "all",  emmet */
-  },
   
-  //"workbench.sideBar.location": "right",
-  "editor.renderControlCharacters": false,
-  "breadcrumbs.enabled": false,
-
-  "typescript.suggest.paths": false,
-
-  "[javascriptreact]": {
-    "editor.minimap.enabled": false,
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    }
-  },
-
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.showSuggestionsAsSnippets": true,
-
-
-  "editor.tokenColorCustomizations": {
-      
-    "[Material Theme Darker]": {
-      //"comments": "#1c8625",
-      //"keywords": "#93f575",
-      //"functions": "#e4f38e",
-      //"variables": "#c8ff00c9",
-      //"strings": "#859900ff",
-    },
-
-
-    //"comments": "#1c8625", // verde
-    "comments": "#727475",
-    "functions": "#e4f38e", // "#c8ff00", //"#e4f38e",
-    //"types": "#6182c9",
-    //"strings": "#379bb4f5", //"#c58142f5", cafe bajo
-    "keywords": "#75d1f5",  //"#eb3d3dfd",
-    //"variables": "#2a74b9e1",
-
-    // azul: #268BD2 1a1616ff  variable.other entity.name.tag
-    // fuczia: #2AA198 1a1616ff
-    // verde bajo mate: #859900ff  string keyword.control
-    // naranja: #cb4b16ff  backg: #002b36ff
-    // rojo: #D30102 punctuation.section.embedded.begin
-    // gris bajo: #93A1A1
-    // violeta 9872A2
-
-
-
-
-
-    "textMateRules": [
-      // use: Cntrl+Shift+P Developert: Inpect TM scopes
-      // inspect Editor Tokens and Scopes
-      {
-      "scope":"support.type.property-name.json",
-      "settings": {
-        "foreground": "#c8ff00d2", /* "#c8ff00c9" bonito verde DS */ 
-        "fontStyle": "italic"
-        }
+    // Added DS
+    // Controls if quick suggestions should show up while typing
+    
+      "editor.quickSuggestions": {
+          "other": true,
+          "comments": false,
+          "strings": false
       },
+  
+     //"editor.quickSuggestions": true,
+      
+     "[cpp]": {
+      "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+      },
+      "editor.wordBasedSuggestions": true
+      },
+      "[c]": {
+          "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+          },
+          "editor.wordBasedSuggestions": true
+      },
+      "C_Cpp.autocomplete": "Default",
 
-      //---------- JAVA  ------------- 
 
-      //---------- META ---------   = ''
-      {
-        "scope":"meta.tag", // string de un atributo html
-        "settings": {
-          "foreground": "#D0B344" //"#D0B344",
-          }
-        },
-      {
-        "scope":"meta.embedded",
-        "settings": {
-          //"foreground": "#eb13d9", // signos {[()]};
-          }
-        },
-
-
-      // --------  C++ --------- entity.name.scope-resolution { "fontStyle": "", "foreground": "#9B0000", "background": "#1E1E1E" }
-      {
-        "scope":["entity.name.scope-resolution"],
-        "settings": {
-          "foreground": "#22f8dcec"
-          }
-        },
-      {
-        "scope":["entity.name.namespace.cpp"],
-        "settings": {
-          "foreground": "#32ce1eec"
-          }
-        },
-      {
-        "scope":["entity.name.type"],
-        "settings": {
-          "foreground": "#f8b422ec"
-          }
-        },
-
-      {
-        "scope":["entity.name.type.namespace.scope-resolution.cpp"],
-        "settings": {
-          "foreground": "#dbff3cad" // </  > 
-          }
-        },
-      {
-        "scope":["entity.name.type.class.cpp"],
-        "settings": {
-          "foreground": "#fd221aef" // </  > 
-          }
-        },
-      {
-        "scope":["entity.name.type.inherited.cpp"],
-        "settings": {
-          "foreground": "#fb844cf3" // </  > 
-          }
-        },
-      {
-        "scope":["entity.name.function.cpp"],
-        "settings": {
-          "foreground": "#cd42f0f3" // </  > 
-          }
-        },
-      {
-        "scope":["entity.name.type.struct.cpp"],
-        "settings": {
-          "foreground": "#7048f3" // </  > 
-          }
-        },
-
+      // para asociar Arduino con C++
+      "files.associations": {
+          "*.ino": "cpp"
+      },
+      
+  
+    // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions. The value 'smart' means only accept a suggestion with Enter when it makes a textual change
+    "editor.acceptSuggestionOnEnter": "on",
+  
+    // Controls the delay in ms after which quick suggestions will show up.
+    "editor.quickSuggestionsDelay": 10,
+  
+    // Controls if suggestions should automatically show up when typing trigger characters
+    "editor.suggestOnTriggerCharacters": true,
+  
+    // Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions
+    "editor.tabCompletion": "on",
+  
+    // Controls whether sorting favours words that appear close to the cursor
+    "editor.suggest.localityBonus": true,
+  
+    // Controls how suggestions are pre-selected when showing the suggest list
+    "editor.suggestSelection": "first",
+  
+    // Enable word based suggestions
+    "editor.wordBasedSuggestions": true,
+      //"terminal.external.windowsExec": "C:/msys32/usr/bin/bash.exe",
+  
+      // Enable parameter hints
+      //"editor.parameterHints": true,
+  
+  
+    /*
+    "terminal.integrated.shell.windows": "C:/msys32/usr/bin/bash.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "--login",
+    ],
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1",
+        "MSYSTEM": "MINGW32",
+    },
+    */
+  
+    "php.validate.executablePath": "C:/wamp64/bin/php/php7.3.21/php.exe",
+    "editor.minimap.enabled": false,
+  
+    "[typescript]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+    },
+    "[php]": {
+      "editor.formatOnSave": true,
+      //"editor.renderWhitespace": "all",  emmet
+    },
+    
+    //"workbench.sideBar.location": "right",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": false,
+  
+    "typescript.suggest.paths": false,
+  
+  
+    
+  
+    "[javascriptreact]": {
+      "editor.minimap.enabled": false,
+      "editor.quickSuggestions": {
+          "other": true,
+          "comments": false,
+          "strings": false
+      }
+    },
+  
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+  
+  
+    "editor.tokenColorCustomizations": {
+        
+      "[Material Theme Darker]": {
+        //"comments": "#1c8625",
+        //"keywords": "#93f575",
+        //"functions": "#e4f38e",
+        //"variables": "#c8ff00c9",
+        //"strings": "#859900ff",
+      },
+  
+  
+      //"comments": "#1c8625", // verde
+      "comments": "#727475",
+      "functions": "#e4f38e", // "#c8ff00", //"#e4f38e",
+      //"types": "#6182c9",
+      //"strings": "#379bb4f5", //"#c58142f5", cafe bajo
+      "keywords": "#75d1f5",  //"#eb3d3dfd",
+      //"variables": "#2a74b9e1",
+  
+      // azul: #268BD2 1a1616ff  variable.other entity.name.tag
+      // fuczia: #2AA198 1a1616ff
+      // verde bajo mate: #859900ff  string keyword.control
+      // naranja: #cb4b16ff  backg: #002b36ff
+      // rojo: #D30102 punctuation.section.embedded.begin
+      // gris bajo: #93A1A1
+      // violeta 9872A2
+  
+  
+  
+  
+  
+      "textMateRules": [
+        // use: Cntrl+Shift+P Developert: Inpect TM scopes
+        // inspect Editor Tokens and Scopes
+        
         /*
         {
-          "scope":["meta.body.function.definition.cpp"],
+          "scope":"support.type.property-name.json",
           "settings": {
-            "foreground": "#ecece5", // </  > 
-            }
-          },
-          */
-
-
-      // --------  HTML ---------
-      {
-        "scope":["punctuation.definition.tag.begin","punctuation.definition.tag.end"],
-        "settings": {
-          "foreground": "#ffffffad" // </  > 
-          }
-        },
-      {
-        "scope":["punctuation.definition.string.begin.html","punctuation.definition.string.end.html"],
-        "settings": {
-          //"foreground": "#ade0b8ce", // </  > 
-          }
-        },
-      {
-        "scope":"entity.name.tag", // div, br, h5, input, form, select
-        "settings": {
-          "foreground": "#00ffffc7"
-        }
-      },
-      {
-        "scope":"entity.other.attribute-name", // style, class, name, id
-        "settings": {
-          "foreground": "#D0B344" // D0B344
-        }
-      },
-      {
-        "scope":"string.quoted.double.html", // string de un atributo html
-        "settings": {
-          "foreground": "#5dafe6c2" //"#c2df7ed3", ***
-          }
-        },
-        // ----------  CSS  - HTML
-      {
-        "scope":"string source", // string de un atributo html
-        "settings": {
-          "foreground": "#D08442" //"#D08442",
-        }
-      },
-      {
-        "scope":"source.css", // string de un atributo html
-        "settings": {
-          "foreground": "#f8803be1" //"#f8803be1", // "#3bf8a09a" // "#f8773b9a",
-        }
-      },
-      {
-        "scope":"support.type.property-name.css", // css param
-        "settings": {
-          "foreground": "#ff95fa" //"#676867",
-          }
-      },
-      {
-        "scope":"meta.property-value support.constant.property-value.css", // css param
-        "settings": {
-          "foreground": "#8fc9ff" //"#C7444A",
-          }
-      },
-    
-      // --------- JAVASCRIPT ----
-      {
-        "scope":"support", // especial JS, JQ document
-        "settings": {
-          "foreground": "#e94048", 
-          "fontStyle": "bold"
-          }
-        },
-      {
-        "scope":"storage.type", // especial JS, function, var 
-        "settings": {
-          "foreground": "#75d1f5"
-          }
-        },
-      {
-        "scope":"variable.other.property", // propied/ getElementbyId 
-        "settings": {
-          "foreground": "#61f080" //"#9872A2",
-          }
-        },
-      {
-        "scope":["variable.other.readwrite.js","variable.other.object.js"], // propied/ getElementbyId 
-        "settings": {
-          "foreground": "#61f080d2" //"#9872A2",
-          }
-        },
-      {
-        "scope":"constant.language", // true false
-        "settings": {
-          "foreground": "#82fb10" //"#408080",
-          }
-      },
-            
-      // ------------   PHP   ----------------
-      {
-        "scope":["punctuation.section.embedded.begin.php","punctuation.section.embedded.end.php"],
-        "settings": {
-          "foreground": "#D30102",
-          "fontStyle": "bold"
-          }
-        },
-      {
-        "scope":"variable.other.php", // Variables PHP $****
-        "settings": {
-          "foreground": "#62db1ccc" //"#58cb16",
+            "foreground": "#c8ff00d2", // "#c8ff00c9" bonito verde DS 
+            "fontStyle": "italic",
           }
         },
     
-      {
-        "scope":"string",   // campos PHP, comas simples
-        "settings": {
-          "foreground": "#b1c52ed0" //"#b1c52e",
-        }
-      },
-      {
-        "scope":"keyword.control", // if else then while PHP
-        "settings": {
-          "foreground": "#ee11b7",
-          //"fontStyle": "italic",
-          "fontStyle": "bold"
-        }
-      },
-      {
-        "scope":"entity.name.function", // mysqli_query
-        "settings": {
-          "foreground": "#e4f38e"
-        }
-      },
-      {
-        "scope":"constant.numeric",  // PHP Numero
-        "settings": {
-          "foreground": "#ffffff" //"#e4f38e",
+    
+        //---------- JAVA  ------------- 
+    
+    
+    
+        //---------- META ---------   = ''
+        {
+          "scope":"meta.tag", // string de un atributo html
+          "settings": {
+            "foreground": "#D0B344", //"#D0B344",
           }
         },
-      {
-        "scope":"variable.other.php",  // Especiales $_SESSION, $_POST
-        "settings": {
-          "foreground": "#6089B4" //"#6089B4",
+        {
+          "scope":"meta.embedded",
+          "settings": {
+            //"foreground": "#eb13d9", // signos {[()]};
           }
         },
-      //---------  SQL (PHP) --------------
-      {
-        "scope":"keyword.other.sql",
-        "settings": {
-          "foreground": "#ecc219"
+    
+    
+        // --------  C++ --------- entity.name.scope-resolution { "fontStyle": "", "foreground": "#9B0000", "background": "#1E1E1E" }
+        {
+          "scope":["entity.name.scope-resolution"],
+          "settings": {
+            "foreground": "#22f8dcec",
           }
         },
-      {
-        "scope":"keyword.other.DML.sql", // FROM SELCT
-        "settings": {
-          "foreground": "#ecc219"
+        {
+          "scope":["entity.name.namespace.cpp"],
+          "settings": {
+            "foreground": "#32ce1eec",
           }
         },
-      {
-        "scope":"keyword",  // ASC, ORDER 
-        "settings": {
-          "foreground": "#ecc219"
-        }
-      },
-      {
-        "scope":"constant.other",  // SQL  -PHP declaraciones campos
-        "settings": {
-          "foreground": "#8080ffd3" //"#8080FF",
-        }
-      },
-      //-------------   JSON   --------------  FF0B00   d0782a   c8ff00d2
-      {
-        "scope":"support.type.property-name.json",  // SQL  -PHP declaraciones campos
-        "settings": {
-          "foreground": "#5DB0E6" //"#8080FF",  c8ff00d2   ff0d00d0 
-        }
-      }
-
-    ]
-
-
-  },
-
-
-
-  "editor.fontFamily": "'Consolas', 'Courier New', monospace",
-  //"editor.fontFamily": "'Fira Code', 'Courier New', monospace",
-  //"editor.fontFamily": "'Anonymous Pro Regular', 'Courier New', monospace",
-  //"editor.fontFamily": "'Tex Gyre Cursor Regular', 'Courier New', monospace",
-  //"editor.fontFamily": "'Inconsolata Regular', 'Courier New', monospace",
-  //"editor.fontFamily": "'Courier New', 'Courier New', monospace",
-  //"editor.fontLigatures": true,
-  //"editor.fontWeight": "300",  // 300, 400, 500, 600 
+        {
+          "scope":["entity.name.type"],
+          "settings": {
+            "foreground": "#f8b422ec",
+          }
+        },
+    
+        {
+          "scope":["entity.name.type.namespace.scope-resolution.cpp"],
+          "settings": {
+            "foreground": "#dbff3cad", // </  > 
+          }
+        },
+        {
+          "scope":["entity.name.type.class.cpp"],
+          "settings": {
+            "foreground": "#fd221aef", // </  > 
+          }
+        },
+        {
+          "scope":["entity.name.type.inherited.cpp"],
+          "settings": {
+            "foreground": "#fb844cf3", // </  > 
+          }
+        },
+        {
+          "scope":["entity.name.function.cpp"],
+          "settings": {
+            "foreground": "#cd42f0f3", // </  > 
+          }
+        },
+        {
+          "scope":["entity.name.type.struct.cpp"],
+          "settings": {
+            "foreground": "#7048f3", // </  > 
+          }
+        },
   
-  //  fontSize 16.5
-  //"window.zoomLevel": -1,  // tamaño de las fuentes del menu  -1 0  +1   ***
-  "window.zoomLevel": 0,
-  "editor.fontSize": 14,
 
-  "editor.autoClosingQuotes": "always",  //* autocempleta comillas y llaves*/
-  "editor.autoClosingBrackets": "always",
+        // /*
+        //{
+        //  "scope":["meta.body.function.definition.cpp"],
+        //  "settings": {
+        //    "foreground": "#ecece5", // </  > 
+        //    }
+        //},
 
-  "editor.wordWrap": "on",  /* detecte el ancho de pantalla col y ajuste */
-  "editor.wrappingIndent": "indent",  /* cuanto tab genera cuando actua el wraping*/
+        
+        //
+        //{
+        //  "scope": "entity.name.type.class.generic",
+        //  "settings": {
+        //    "foreground": "#C7444A",
+        //    "fontStyle": ""
+        //  }
+        //},
 
+        //{
+        //  "scope": [
+        //    "entity.name.type",
+        //    "entity.name.class",
+        //    "meta.body.function.definition.cpp"
+        //  ],
+        //  "settings": {
+        //    "foreground": "#5979aa"
+        //  }
+        //},
+
+        //{
+        // "scope":"variable.other.property.cpp", // propied/ getElementbyId 
+        //  "settings": {
+        //    "foreground": "#61f080", //"#9872A2",
+        //    }
+        //},
+        //*** /
   
-  "workbench.colorCustomizations": {
-    "editorCursor.background": "#000000",
-    "editorCursor.foreground": "#FF0B00",
-
-    "editor.background": "#100e0e", // "#100e0e", //#"1a1616" //"#0e1010", 
-    "editor.foreground": "#ccc", // ffffff color letra
-    "editorLineNumber.foreground": "#00ffea79", // "#00ffea79",
-
-    "sideBar.background": "#111010",
-    "sideBar.foreground": "#b4c1cef1",//"#a4e6d2", // barra tree 
-    "list.hoverForeground": "#99ff14",
-    "list.hoverBackground": "#FF0B00",
-
-    "statusBar.background": "#292828bd",
-    "statusBar.foreground": "#ffffff",  /* color letras */
-
-    "activityBar.background": "#001608ec",
-    "activityBar.foreground": "#c8ff00",   
     
-    "selection.background": "#ee33338e",
-    "editor.selectionHighlightBackground": "#5b9ca59f", //"#5b9ca59f"
-    "editor.selectionBackground": "#c72121b9", //"#237fb45b",
-    "editor.lineHighlightBackground": "#88ff000c",
-
-    "editorIndentGuide.activeBackground": "#00ccff7c", // color de lineas de identacion
-    "editorIndentGuide.background": "#4b525131",
-
-    "scrollbarSlider.background": "#00f7ff7e",
-
-    "editorWidget.border":"#ffffff85",
-    "editorWidget.background":"#000000",
-
-    "contrastBorder": "#4745459d",  // bordecillo de contornos.
-
-
-    /*
-      verde opaco bajo: #96b38a;
-      violeta opaco: #9a8297;
-      moztaza opaco: #ddca7e;
-      azul opaco: #809bbd;
-      naranja opaco: #d0782a;
-      cafe opaco: #a7925a;
-
-      naranja bonito: FF0B00;
-      amarillo: #ffc107;  #fff51ee6;  ***
-
-
-      celeste brillante bonito: #5DB0E6;
-      gris socuro: #686868;
-    
-    */
-
-  },
-
-
-  "workbench.settings.editor": "json",
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "editor.cursorWidth": 4,
-
-  //* para que no cierre los archivos vistos */
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.enablePreview": false,
-  //"editor.renderIndentGuides": false,
-
-  //"debug.allowBreakpointsEverywhere": true,
-  //"C_Cpp.updateChannel": "Insiders",
-  "arduino.ignoreBoards": [
-    "Adafruit HUZZAH ESP8266"
-  ],
-  "workbench.startupEditor": "newUntitledFile",
-
-  //"javascript.implicitProjectConfig.checkJs": true,
-
-  //"C_Cpp.default.includePath": null,
-
-  // code-runner
-  "code-runner.runInTerminal": true,
-  "code-runner.saveAllFilesBeforeRun": true,
-
-  //"arduino.commandPath": "arduino_debug.exe",
-  //"arduino.logLevel": "info",
-  //"arduino.allowPDEFiletype": false, 
-  "arduino.enableUSBDetection": false,
-  "arduino.disableTestingOpen": false,
-  "arduino.skipHeaderProvider": false,
-
-  "arduino.defaultBaudRate": 115200,
-  "C_Cpp.commentContinuationPatterns": [
-
-    "/**"
-  ],
-
-  "name": "Arduino",
-      "includePath": [
-          "{path-to-arduino}/hardware/arduino/avr/cores/arduino/",
-          "{path-to-arduino}/hardware/arduino/avr/libraries/EEPROM/",
-          "{path-to-arduino}/hardware/arduino/avr/libraries/SPI/",
-          "{path-to-arduino}/hardware/arduino/avr/libraries/SoftwareSerial/",
-          "{path-to-arduino}/hardware/arduino/avr/libraries/Wire/",
-          "{path-to-arduino}/hardware/tools/avr/avr/include/",
-          "{path-to-arduino}/hardware/tools/avr/avr/include/avr/",
-          "{path-to-arduino}/hardware/tools/avr/avr/include/compat/",
-          "{path-to-arduino}/hardware/tools/avr/avr/include/util/",
-          "{path-to-arduino}/hardware/tools/avr/lib/gcc/avr/4.*.*/include/",
-          "{path-to-arduino}/hardware/tools/avr/lib/gcc/avr/4.*.*/include-fixed/"
+        // --------  HTML ---------
+        {
+          "scope":["punctuation.definition.tag.begin","punctuation.definition.tag.end"],
+          "settings": {
+            "foreground": "#ffffffad", // </  > 
+          }
+        },
+        {
+          "scope":["punctuation.definition.string.begin.html","punctuation.definition.string.end.html"],
+          "settings": {
+            //"foreground": "#ade0b8ce", // </  > 
+          }
+        },
+        {
+          "scope":"entity.name.tag", // div, br, h5, input, form, select
+          "settings": {
+            "foreground": "#00ffffc7",
+          }
+        },
+        {
+          "scope":"entity.other.attribute-name", // style, class, name, id
+          "settings": {
+            "foreground": "#D0B344", // D0B344
+          }
+        },
+        {
+          "scope":"string.quoted.double.html", // string de un atributo html
+          "settings": {
+            "foreground": "#5dafe6c2", //"#c2df7ed3", ***
+          }
+        },
+          // ----------  CSS  - HTML
+        {
+          "scope":"string source", // string de un atributo html
+          "settings": {
+            "foreground": "#D08442", //"#D08442",
+          }
+        },
+        {
+          "scope":"source.css", // string de un atributo html
+          "settings": {
+            "foreground": "#f8803be1", //"#f8803be1", // "#3bf8a09a" // "#f8773b9a",
+          }
+        },
+        {
+          "scope":"support.type.property-name.css", // css param
+          "settings": {
+            "foreground": "#ff95fa", //"#676867",
+          }
+        },
+        {
+          "scope":"meta.property-value support.constant.property-value.css", // css param
+          "settings": {
+            "foreground": "#8fc9ff", //"#C7444A",
+          }
+        },
+        
+        // --------- JAVASCRIPT ----
+        {
+          "scope":"support", // especial JS, JQ document
+          "settings": {
+            "foreground": "#e94048", 
+            "fontStyle": "bold",
+          }
+        },
+        {
+          "scope":"storage.type", // especial JS, function, var 
+          "settings": {
+            "foreground": "#75d1f5",
+          }
+        },
+        {
+          "scope":"variable.other.property", // propied/ getElementbyId 
+          "settings": {
+            "foreground": "#61f080", //"#9872A2",
+          }
+        },
+        {
+          "scope":["variable.other.readwrite.js","variable.other.object.js"], // propied/ getElementbyId 
+          "settings": {
+            "foreground": "#61f080d2", //"#9872A2",
+          }
+        },
+        {
+          "scope":"constant.language", // true false
+          "settings": {
+            "foreground": "#82fb10", //"#408080",
+          }
+        },
+                
+        // ------------   PHP   ----------------
+        {
+          "scope":["punctuation.section.embedded.begin.php","punctuation.section.embedded.end.php"],
+          "settings": {
+            "foreground": "#D30102",
+            "fontStyle": "bold",
+          }
+        },
+        {
+          "scope":"variable.other.php", // Variables PHP $****
+          "settings": {
+            "foreground": "#62db1ccc", //"#58cb16",
+          }
+        },
+      
+        {
+          "scope":"string",   // campos PHP, comas simples
+          "settings": {
+            "foreground": "#b1c52ed0", //"#b1c52e",
+          }
+        },
+        {
+          "scope":"keyword.control", // if else then while PHP
+          "settings": {
+            "foreground": "#ee11b7",
+            //"fontStyle": "italic",
+            "fontStyle": "bold",
+          }
+        },
+        {
+          "scope":"entity.name.function", // mysqli_query
+          "settings": {
+            "foreground": "#e4f38e",
+          }
+        },
+        {
+          "scope":"constant.numeric",  // PHP Numero
+          "settings": {
+            "foreground": "#ffffff", //"#e4f38e",
+          }
+        },
+        {
+          "scope":"variable.other.php",  // Especiales $_SESSION, $_POST
+          "settings": {
+            "foreground": "#6089B4", //"#6089B4",
+          }
+        },
+        //---------  SQL (PHP) --------------
+        {
+          "scope":"keyword.other.sql",
+          "settings": {
+            "foreground": "#ecc219",
+          }
+        },
+        {
+          "scope":"keyword.other.DML.sql", // FROM SELCT
+          "settings": {
+            "foreground": "#ecc219",
+          }
+        },
+        {
+          "scope":"keyword",  // ASC, ORDER 
+          "settings": {
+            "foreground": "#ecc219",
+          }
+        },
+        {
+          "scope":"constant.other",  // SQL  -PHP declaraciones campos
+          "settings": {
+            "foreground": "#8080ffd3", //"#8080FF",
+          }
+        },
+        //-------------   JSON   --------------  FF0B00   d0782a   c8ff00d2
+        {
+          "scope":"support.type.property-name.json",  // SQL  -PHP declaraciones campos
+          "settings": {
+            "foreground": "#5DB0E6", //"#8080FF",  c8ff00d2   ff0d00d0 
+          }
+        },
+        /**/
+  
+  
+          
       ],
-    "browse": {
-        "limitSymbolsToIncludedHeaders": true,
-        "databaseFilename": ""
+  
+  
     },
   
-    "workbench.enableExperiments": false,
-    //"telemetry.enableTelemetry": false,
-    "telemetry.telemetryLevel": "off",
-    "npm.fetchOnlinePackageInfo": false,
-    "json.schemaDownload.enable": false,
+  
+  
+    "editor.fontFamily": "'Consolas', 'Courier New', monospace",
+    //"editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+    //"editor.fontFamily": "'Anonymous Pro Regular', 'Courier New', monospace",
+    //"editor.fontFamily": "'Tex Gyre Cursor Regular', 'Courier New', monospace",
+    //"editor.fontFamily": "'Inconsolata Regular', 'Courier New', monospace",
+    //"editor.fontFamily": "'Courier New', 'Courier New', monospace",
+    //"editor.fontLigatures": true,
+    //"editor.fontWeight": "300",  // 300, 400, 500, 600 
+    
+    //  fontSize 16.5
+    //"window.zoomLevel": -1,  // tamaño de las fuentes del menu  -1 0  +1   ***
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+  
+    "editor.autoClosingQuotes": "always",  //* autocempleta comillas y llaves*/
+    "editor.autoClosingBrackets": "always",
+  
+    "editor.wordWrap": "on",  /* detecte el ancho de pantalla col y ajuste */
+    "editor.wrappingIndent": "indent",  /* cuanto tab genera cuando actua el wraping*/
+  
+    
+    "workbench.colorCustomizations": {
+      "editorCursor.background": "#000000",
+      "editorCursor.foreground": "#FF0B00",
+  
+      "editor.background": "#100e0e", // "#100e0e", //#"1a1616" //"#0e1010", 
+      "editor.foreground": "#ccc", // ffffff color letra
+      "toolbar.hoverBackground": "#ff1d1d",
 
-    "workbench.colorTheme": "Monokai Dimmed"
+      "editorLineNumber.foreground": "#00ffea79", // "#00ffea79",
+  
+      "sideBar.background": "#111010",
+      "sideBar.foreground": "#b4c1cef1",//"#a4e6d2", // barra tree 
+      "list.hoverForeground": "#99ff14",
+      "list.hoverBackground": "#FF0B00",
+  
+      "statusBar.background": "#292828bd",
+      "statusBar.foreground": "#ffffff",  /* color letras */
+  
+      "activityBar.background": "#001608ec",
+      "activityBar.foreground": "#c8ff00",   
+      
+      "selection.background": "#ee33338e",
+      "editor.selectionHighlightBackground": "#5b9ca59f", //"#5b9ca59f"
+      "editor.selectionBackground": "#c72121b9", //"#237fb45b",
+      "editor.lineHighlightBackground": "#88ff000c",
+  
+      "editorIndentGuide.activeBackground": "#00ccff7c", // color de lineas de identacion
+      "editorIndentGuide.background": "#4b525131",
+  
+      "scrollbarSlider.background": "#00f7ff7e",
+  
+      "editorWidget.border":"#ffffff85",
+      "editorWidget.background":"#000000",
+  
+      "contrastBorder": "#4745459d",  // bordecillo de contornos.
+  
+  
+      /*
+        verde opaco bajo: #96b38a;
+        violeta opaco: #9a8297;
+        moztaza opaco: #ddca7e;
+        azul opaco: #809bbd;
+        naranja opaco: #d0782a;
+        cafe opaco: #a7925a;
+  
+        naranja bonito: FF0B00;
+        amarillo: #ffc107;  #fff51ee6;  ***
+  
+  
+        celeste brillante bonito: #5DB0E6;
+        gris socuro: #686868;
+      
+      */
+  
+  
+    },
+  
+  
+    "workbench.settings.editor": "json",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.cursorWidth": 4,
+  
+    //* para que no cierre los archivos vistos */
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
+    //"editor.renderIndentGuides": false,
+  
+    //"debug.allowBreakpointsEverywhere": true,
+    //"C_Cpp.updateChannel": "Insiders",
+    "arduino.ignoreBoards": [
+      "Adafruit HUZZAH ESP8266"
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+  
+    //"javascript.implicitProjectConfig.checkJs": true,
 
-}
+    //"C_Cpp.default.includePath": null,
+
+
+
+    // code-runner
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+
+
+
+    "arduino.path": "C:/Program Files (x86)/Arduino",
+    //"arduino.commandPath": "arduino_debug.exe",
+    //"arduino.logLevel": "info",
+    //"arduino.allowPDEFiletype": false, 
+    "arduino.enableUSBDetection": false,
+    "arduino.disableTestingOpen": false,
+    "arduino.skipHeaderProvider": false,
+
+    /*
+    "arduino.additionalUrls": [
+        "https://raw.githubusercontent.com/VSChina/azureiotdevkit_tools/master/package_azureboard_index.json",
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    */
+    "arduino.defaultBaudRate": 115200,
+    "C_Cpp.commentContinuationPatterns": [
+
+      "/**"
+    ],
+    
+
+
+  
+  
+  }
